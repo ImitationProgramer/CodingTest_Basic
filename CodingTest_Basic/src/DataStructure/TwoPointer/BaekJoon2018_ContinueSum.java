@@ -25,8 +25,12 @@ public class BaekJoon2018_ContinueSum {
 			} else if (sum > N) { // 현재 연속 합이 N보다 더 큰 경우
 				sum = sum - start_index;
 				start_index++;
+			} else { // 현재 연속 합이 N보다 작은 경우
+				end_index++;
+				sum = sum + end_index;
 			}
 		}
+		System.out.println(count);
 	}
 
 }
