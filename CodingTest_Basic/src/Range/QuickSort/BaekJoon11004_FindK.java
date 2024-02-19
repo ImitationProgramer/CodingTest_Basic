@@ -1,4 +1,4 @@
-package DataStructure.Range.QuickSort;
+package Range.QuickSort;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +28,7 @@ public class BaekJoon11004_FindK {
 			A[i] = Integer.parseInt(st.nextToken());
 		}
 		quickSort(A, 0, N - 1, K - 1);
+		System.out.println(A[K - 1]);
 	}
 
 	public static void quickSort(int[] A, int S, int E, int K) {
@@ -52,7 +53,21 @@ public class BaekJoon11004_FindK {
 		swap(A, S, M); // 중앙값을 1번째 요소로 이동하기
 		int pivot = A[S];
 		int i = S + 1, j = E;
-		return 0;
+		while (i <= j) {
+			while (j >= S + 1 && pivot < A[j]) { // 피벗보다 작은 수가 나올 때까지 j--
+				j--;
+			}
+			while (i <= E && pivot > A[i]) { // 피벗보다 큰 수가 나올 때까지 i++
+				i++;
+			}
+			if (i <= j) {
+				swap(A, i++, j--);
+			}
+		}
+		// 피벗 데이터를 나눠진 두 그룹의 경계 index에 저장하기
+		A[S] = A[j];
+		A[j] = pivot;
+		return j;
 	}
 
 	public static void swap(int[] A, int i, int j) {

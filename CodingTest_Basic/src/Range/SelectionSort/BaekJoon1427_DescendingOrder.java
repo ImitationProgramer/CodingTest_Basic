@@ -1,4 +1,4 @@
-package DataStructure.Range.SelectionSort;
+package Range.SelectionSort;
 
 import java.util.Scanner;
 

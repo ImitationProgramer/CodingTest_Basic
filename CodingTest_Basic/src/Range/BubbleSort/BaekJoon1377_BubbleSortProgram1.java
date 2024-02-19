@@ -1,4 +1,4 @@
-package DataStructure.Range.BubbleSort;
+package Range.BubbleSort;
 
 import java.io.BufferedReader;
 import java.io.IOException;

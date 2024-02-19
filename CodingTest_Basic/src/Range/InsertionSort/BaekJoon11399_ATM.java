@@ -1,4 +1,4 @@
-package DataStructure.Range.InsertionSort;
+package Range.InsertionSort;
 
 import java.util.Scanner;
 

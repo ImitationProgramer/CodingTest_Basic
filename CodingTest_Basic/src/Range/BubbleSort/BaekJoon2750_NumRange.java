@@ -1,4 +1,4 @@
-package DataStructure.Range.BubbleSort;
+package Range.BubbleSort;
 
 import java.util.Scanner;
 
